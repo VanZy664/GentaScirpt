@@ -56,6 +56,7 @@ function FindDroped(id)
 for _, obj in pairs(getWorldObject()) do
 if obj.id == id then
 findPath(obj.pos.x//32,obj.pos.y//32)
+sendPacketRaw(false,{type=11,value=obj.oid,x=obj.pos.x,y=obj.pos.y,punchx=(obj.pos.x + obj.pos.y) + 2})
 return true
 end
 end
@@ -89,6 +90,7 @@ turu(2000)
 until getWorld().name == set.save.World
 FindDroped(set.id.Axe_id)
 turu(1000)
+use(set.id.Axe_id)
 findPath(set.save.Gem_Display_x,set.save.Gem_Display_y)
 while inv(set.id.Coupon_id) > 0 do
 turu(1000)
@@ -107,7 +109,5 @@ end
 
 
 dhook(main)
-
-
 
 
