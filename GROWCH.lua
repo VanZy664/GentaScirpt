@@ -90,7 +90,7 @@ until getWorld().name == set.save.World
 FindDroped(set.id.Axe_id)
 turu(1000)
 findPath(set.save.Gem_Display_x,set.save.Gem_Display_y)
-while inv(set.id.Coupon_id) <= 0 do
+while inv(set.id.Coupon_id) > 0 do
 turu(1000)
 drop(set.id.Coupon_id, inv(set.id.Coupon_id))
 end
