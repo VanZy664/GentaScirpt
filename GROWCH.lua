@@ -172,7 +172,7 @@ end
 end)
 
 
-log("Command : /world <World Save (HARUS HURUF BESAR>>, /setdisplay (Save Coupon Ke World Save), /delay <delay mukul pohon>, /start (mulai auto), /radius <radius pohon yg mau di pukul>, /stop (Memberhentikan Auto)")
-for i = 1,50 do
+for i = 1,20 do
 log("HURUF BESAR YA KONTOL SETTING WORLDNYA")
 end
+log("Command : /world <World Save (HARUS HURUF BESAR>>, /setdisplay (Save Coupon Ke World Save), /delay <delay mukul pohon>, /start (mulai auto), /radius <radius pohon yg mau di pukul>, /stop (Memberhentikan Auto)")
