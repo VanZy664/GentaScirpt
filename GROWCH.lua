@@ -1,5 +1,6 @@
 local delay = 200 --Delay Punch Tree
 local rad = 2 
+local brek = false
 local set = {
 id = {
 Tree_id = 3200,
@@ -156,6 +157,7 @@ return true
 end
 
 if p:lower():find("text|/start") then
+brek = false
 log("Memulai Auto Cut")
 dhook(main)
 return true
