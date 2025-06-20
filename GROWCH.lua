@@ -149,8 +149,8 @@ log("Display Drop Coupon Di Atur Ke "..set.save.Gem_Display_x..", "..set.save.Ge
 return true
 end
 
-if p:lower():find("text|/world (.+)") then
-set.save.World = p:lower():match("text|/world (.+)")
+if p:find("text|/world (.+)") then
+set.save.World = p:match("text|/world (.+)")
 log("World Save Di Atur Ke "..set.save.World)
 return true
 end
@@ -170,4 +170,7 @@ end
 end)
 
 
-log("Command : /world <World Save>, /setdisplay (Save Coupon Ke World Save), /delay <delay mukul pohon>, /start (mulai auto), /radius <radius pohon yg mau di pukul>, /stop (Memberhentikan Auto)")
+log("Command : /world <World Save (HARUS HURUF BESAR>>, /setdisplay (Save Coupon Ke World Save), /delay <delay mukul pohon>, /start (mulai auto), /radius <radius pohon yg mau di pukul>, /stop (Memberhentikan Auto)")
+for i = 1,50 do
+log("HURUF BESAR YA KONTOL SETTING WORLDNYA")
+end
