@@ -107,6 +107,7 @@ end
 function main()
 while true do
 if inv(set.id.Axe_id) <= 0 then
+turu(4000)
 repeat
 warp(set.save.World)
 turu(2000)
@@ -115,10 +116,10 @@ FindDroped(set.id.Axe_id)
 use(set.id.Axe_id)
 findPath(set.save.Gem_Display_x,set.save.Gem_Display_y)
 repeat
-turu(1000)
+turu(4000)
 drop(set.id.Coupon_id, inv(set.id.Coupon_id))
 until inv(set.id.Coupon_id) > 0
-turu(1000)
+turu(2000)
 warp("GROWCH")
 turu(2000)
 else
