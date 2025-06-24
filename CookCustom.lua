@@ -82,7 +82,7 @@ end
 AddHook("OnTextPacket","Settings",function(t,p)
 
 if p:lower():find("text|/oven (%d+) (%d+)") then
-local x,y = p:lower():match("text|/oven (%d+) (%d+)")
+local x,y = tonumber(p:lower():match("text|/oven (%d+) (%d+)"))
 table.insert(oven, {x = x, y = y})
 for i = 1,#oven do;log("{x = "..oven[i].x..", y = "..oven[i].y.."}");end
 return true
