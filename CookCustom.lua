@@ -82,10 +82,12 @@ end
 AddHook("OnTextPacket","Settings",function(t,p)
 
 if p:lower():find("text|/oven (%d+) (%d+)") then
-local x,y = tonumber(p:lower():match("text|/oven (%d+) (%d+)"))
-table.insert(oven, {x = x, y = y})
-for i = 1,#oven do;log("{x = "..oven[i].x..", y = "..oven[i].y.."}");end
-return true
+    local x, y = p:lower():match("text|/oven (%d+) (%d+)")
+    table.insert(oven, {x = tonumber(x), y = tonumber(y)})
+    for i = 1, #oven do
+        log("{x = " .. oven[i].x .. ", y = " .. oven[i].y .. "}")
+    end
+    return true
 end
 
 if p:lower():find("text|/add (%d+) (%d+) (%d+)") then
@@ -182,3 +184,4 @@ end)
 for i= 1,10 do
 log("Script Cook Custom has been Running do Command /HelpCook, To See Command")
 end
+
